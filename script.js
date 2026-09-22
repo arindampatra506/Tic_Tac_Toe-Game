@@ -27,7 +27,7 @@ const enableBoxes=()=>{
 };
 
 const resetGame=() =>{ //let new game start again
-    trunO=true;
+    turnO=true;
     enableBoxes();
     msgcontainer.classList.add("hide"); //when game win msg container box remove but in this line when we do reset or new game then msgcontaner box again hide.
 };
@@ -45,7 +45,7 @@ boxes.forEach((box)=>{
         }else{
             //playerX
             box.innerText="X";
-            box.classList.add("x"); //it do 'O' blue color see style
+            box.classList.add("x"); //it do 'x' blue color see style
             turnO=true;
         }
         box.disabled=true; //if i click the button once next time can't click the button
@@ -62,7 +62,7 @@ const disableBoxes=()=>{
 
 
 const showWinner=(winner)=>{
-    msg.innerText=`Congratulation,winer is ${winner}`;
+    msg.innerText=`Congratulations, winner is ${winner}`;
     msgcontainer.classList.remove("hide"); //when someone win this time remove the hide of msg container box and show game page.
     disableBoxes();
 };
