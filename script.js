@@ -23,6 +23,8 @@ const enableBoxes=()=>{
     for(let box of boxes){
         box.disabled=false; //when i do reset game or new game then again new boox came means game refres
         box.innerText=""; //box become empty
+        box.classList.remove("o"); //remove the red color of O
+        box.classList.remove("x"); //remove the blue color of X
     }
 };
 
